@@ -1,18 +1,17 @@
-import React from 'react';
 import logo from './logo.svg';
 
 function Card(props: any){
+
   return (
-    <div className="border border-gray-600 mb-4">
-      <img src={logo} alt="" />
-      <p>{props.title}</p>
+    <div className="bg-gray-200 rounded-lg mb-8 text-gray-700 cursor-pointer">
+      <img src={ logo } alt="Screenshot of the project" />
+      <p className="p-5 font-bold">{props.title}</p>
     </div>
   );
+
 }
+
+Card.defaultProps = { title: "Title" };
 
 export default Card;
 
-Card.defaultProps = {
-  
-  title: "Title"
-}
