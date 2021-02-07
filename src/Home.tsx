@@ -1,9 +1,16 @@
+import { Link } from 'react-router-dom';
 import Card from './Card';
 
-function Home(props: any){
+
+function Home( props: any ){
 
   const cards = props.projects.map( (project: any) =>
-    <Card key={project.key} title={project.title} />
+    <Link to={ "/" + project.key }>
+      <Card
+        key={ project.key }
+        title={ project.title }
+      />
+    </Link>
   );
 
   return (
