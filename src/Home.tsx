@@ -5,7 +5,7 @@ import Card from './Card';
 function Home( props: any ){
 
   const cards = props.projects.map( (project: any) =>
-    <Link to={ "/" + project.key }>
+    <Link to={ "/" + props.titleAsUrl( project.title ) }>
       <Card
         key={ project.key }
         title={ project.title }

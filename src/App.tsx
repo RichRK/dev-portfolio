@@ -15,10 +15,14 @@ function App() {
     { key: "6", title: "Remember When" }
   ];
 
+  const titleAsUrl = ( title: string ): string => {
+    return title.toLowerCase().replaceAll( ' ', '-' )
+  }
+
   const routes = projects.map( ( project ) =>
     <Route
       key={ project.key }
-      path={ "/" + project.key }
+      path={ "/" + titleAsUrl( project.title ) }
       render={ () => <Page title={ project.title } /> }
     />
   );
@@ -26,11 +30,9 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-lg text-gray-100 p-8 xl:px-20 xl:py-14">
       <Router>
-        <Route
-          path="/"
-          exact
-          render={ () => <Home projects={projects} /> }
-        />
+        <Route path="/" exact>
+          <Home projects={projects} titleAsUrl={ titleAsUrl } />
+        </Route>
         { routes }
       </Router>
     </div>
