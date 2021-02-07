@@ -15,19 +15,23 @@ function App() {
     { key: "6", title: "Remember When" }
   ];
 
-  const pages = projects.map( ( project ) =>
+  const routes = projects.map( ( project ) =>
     <Route
       key={ project.key }
       path={ "/" + project.key }
-      component={ Page }
+      render={ () => <Page title={ project.title } /> }
     />
   );
 
   return (
     <div className="min-h-screen bg-gray-900 text-lg text-gray-100 p-8 xl:px-20 xl:py-14">
       <Router>
-        <Route path="/" exact render={ () => <Home projects={projects} /> } />
-        { pages }
+        <Route
+          path="/"
+          exact
+          render={ () => <Home projects={projects} /> }
+        />
+        { routes }
       </Router>
     </div>
   );
