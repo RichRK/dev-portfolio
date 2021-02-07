@@ -20,11 +20,9 @@ function App() {
   }
 
   const routes = projects.map( ( project ) =>
-    <Route
-      key={ project.key }
-      path={ "/" + titleAsUrl( project.title ) }
-      render={ () => <Page title={ project.title } /> }
-    />
+    <Route key={ project.key } path={ "/" + titleAsUrl( project.title ) }>
+      <Page title={ project.title } />
+    </Route>
   );
 
   return (
