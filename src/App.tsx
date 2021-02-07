@@ -17,9 +17,9 @@ function App() {
   );
 
   return (
-    <div className="grid grid-cols-1 min-h-screen bg-gray-900 text-lg text-gray-100 p-6">
-      <h1 className="font-bold text-5xl mb-6">Dev work</h1>
-      <p className="mb-8">A selection of projects I've worked on — some big and some small, all full to the brim with their own challenges.</p>
+    <div className="grid grid-cols-1 gap-8 p-8 min-h-screen bg-gray-900 text-lg text-gray-100 sm:grid-cols-2 lg:grid-cols-3 xl:px-20 xl:py-14">
+      <h1 className="font-bold text-5xl">Dev work</h1>
+      <p className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">A selection of projects I've worked on — some big and some small, all full of their own challenges.</p>
       { cards }
     </div>
   );
