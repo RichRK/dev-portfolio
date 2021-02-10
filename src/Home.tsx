@@ -7,6 +7,7 @@ function Home( props: any ){
   const cards = props.projects.map( (project: any) =>
     <Link to={ "/" + props.titleAsUrl( project.title ) }>
       <Card
+        language={ project.language }
         key={ project.key }
         title={ project.title }
       />

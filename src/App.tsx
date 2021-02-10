@@ -7,12 +7,12 @@ import Page from './Page';
 function App() {
 
   const projects = [
-    { key: "1", title: "Listing form" },
-    { key: "2", title: "PID generator" },
-    { key: "3", title: "Automated testing" },
-    { key: "4", title: "Data from Microsoft Dynamics" },
-    { key: "5", title: "Community Maps" },
-    { key: "6", title: "Remember When" }
+    { key: "1", title: "Listing form", language: "Vue" },
+    { key: "2", title: "PID generator", language: "C#" },
+    { key: "3", title: "Automated testing", language: "Python" },
+    { key: "4", title: "Data from Microsoft Dynamics", language: "C#" },
+    { key: "5", title: "Community Maps", language: "jQuery" },
+    { key: "6", title: "Remember When", language: "jQuery" }
   ];
 
   const titleAsUrl = ( title: string ): string => {
