@@ -1,5 +1,5 @@
 import LanguageBadge from './LanguageBadge';
-import logo from './logo.svg';
+import logo from '../assets/logo.svg';
 
 function Card(props: any){
 

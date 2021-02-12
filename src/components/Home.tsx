@@ -8,7 +8,7 @@ function Home( props: any ){
     <Link to={ "/" + props.titleAsUrl( project.title ) }>
       <Card
         language={ project.language }
-        key={ project.key }
+        key={ project._key }
         title={ project.title }
       />
     </Link>
