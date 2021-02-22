@@ -13,7 +13,7 @@ function App() {
 
   const routes = Projects.map( ( project ) =>
     <Route key={ project._key } path={ "/" + titleAsUrl( project.title ) }>
-      <Page title={ project.title } />
+      <Page title={ project.title } content={ project.content } />
     </Route>
   );
 
