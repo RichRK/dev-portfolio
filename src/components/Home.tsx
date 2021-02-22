@@ -5,10 +5,9 @@ import Card from './Card';
 function Home( props: any ){
 
   const cards = props.projects.map( (project: any) =>
-    <Link to={ "/" + props.titleAsUrl( project.title ) }>
+    <Link key={ project._key } to={ "/" + props.titleAsUrl( project.title ) }>
       <Card
         language={ project.language }
-        key={ project._key }
         title={ project.title }
       />
     </Link>
