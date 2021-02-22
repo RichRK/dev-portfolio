@@ -1,6 +1,6 @@
 [
     {
-        "_key": "1",
+        "_key": 1,
         "content": {
             "requirements": [
                 "This particular project was self-initiated. My intent was to demonstrate the sizable improvements that could be made to our members’ experience at the moment they secure a new listing and are ready to enter it into our listing database. (At which point it typically becomes available to the public.)",
@@ -27,7 +27,7 @@
         "title": "Listing form"
     },
     {
-        "_key": "2",
+        "_key": 2,
         "content": {
             "requirements": [
                 "A little context to begin with! Within the world of real estate each property is assigned its own unique ‘property identification number’, or ‘PID number’ for short. Detached, single-family homes have one, duplexes have a couple and in the case of apartments, each unit has its own separate PID.",
@@ -56,25 +56,25 @@
         "title": "PID generator"
     },
     {
-        "_key": "3",
+        "_key": 3,
         "content": {},
         "language": "Python",
         "title": "Automated testing"
     },
     {
-        "_key": "4",
+        "_key": 4,
         "content": {},
         "language": "C#",
         "title": "Data from Microsoft Dynamics"
     },
     {
-        "_key": "5",
+        "_key": 5,
         "content": {},
         "language": "jQuery",
         "title": "Community Maps"
     },
     {
-        "_key": "6",
+        "_key": 6,
         "content": {},
         "language": "jQuery",
         "title": "Remember When"
