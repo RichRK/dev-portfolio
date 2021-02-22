@@ -1,7 +1,12 @@
 import LanguageBadge from './LanguageBadge';
 import logo from '../assets/logo.svg';
 
-function Card(props: any){
+interface CardProps {
+  language: string
+  title: string
+}
+
+function Card(props: CardProps){
 
   return (
     <div className="relative bg-gray-200 rounded-lg text-gray-700">

@@ -1,4 +1,8 @@
-function LanguageBadge(props: any){
+interface LanguageBadgeProps {
+  language: string
+}
+
+function LanguageBadge(props: LanguageBadgeProps){
 
   const bgColour = ( language: string ): string => {
     switch ( language ) {

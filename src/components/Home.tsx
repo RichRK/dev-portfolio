@@ -1,10 +1,24 @@
 import { Link } from 'react-router-dom';
 import Card from './Card';
 
+interface HomeProps {
+  projects: Array< {
+    _key: number;
+    content: {
+        requirements?: string[];
+        process?: string[];
+        challenges?: string[];
+        future?: string[];
+    };
+    language: string;
+    title: string;
+  } >
+  titleAsUrl: Function
+}
 
-function Home( props: any ){
+function Home( props: HomeProps ){
 
-  const cards = props.projects.map( (project: any) =>
+  const cards = props.projects.map( ( project ) =>
     <Link key={ project._key } to={ "/" + props.titleAsUrl( project.title ) }>
       <Card
         language={ project.language }
