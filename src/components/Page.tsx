@@ -19,8 +19,8 @@ function Page(props: PageProps){
       <h2 className="font-bold text-2xl capitalize">
         { heading }
       </h2>
-      { text?.map( ( paragraph ) =>
-        <p className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
+      { text?.map( ( paragraph, index ) =>
+        <p key={ index } className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
           { paragraph }
         </p>
       ) }
