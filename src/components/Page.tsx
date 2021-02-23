@@ -2,10 +2,10 @@ import React from 'react';
 
 interface PageProps {
   content: {
-    requirements?: string[]
-    process?: string[]
-    challenges?: string[]
-    future?: string[]
+    requirements?: Array< string | Array<string> > 
+    process?: Array< string | Array<string> >
+    challenges?: Array< string | Array<string> >
+    future?: Array< string | Array<string> >
   }
   title: string
 }
@@ -19,10 +19,19 @@ function Page(props: PageProps){
       <h2 className="font-bold text-2xl capitalize">
         { heading }
       </h2>
-      { text?.map( ( paragraph, index ) =>
-        <p key={ index } className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
-          { paragraph }
-        </p>
+      { text?.map( ( paragraph, i ) =>
+        <React.Fragment key={ i }>
+          { Array.isArray( paragraph ) ? <ul>
+            { paragraph.map( ( bullet, i ) =>
+                <li key={ i }>
+                  { bullet }
+                </li>
+            ) }
+          </ul> :
+          <p className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
+            { paragraph }
+          </p> }
+        </React.Fragment>
       ) }
     </React.Fragment>
   );

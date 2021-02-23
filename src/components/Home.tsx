@@ -3,15 +3,15 @@ import Card from './Card';
 
 interface HomeProps {
   projects: Array< {
-    _key: number;
+    _key: number
     content: {
-        requirements?: string[];
-        process?: string[];
-        challenges?: string[];
-        future?: string[];
+        requirements?: Array< string | Array<string> >
+        process?: Array< string | Array<string> >
+        challenges?: Array< string | Array<string> >
+        future?: Array< string | Array<string> >
     };
-    language: string;
-    title: string;
+    language: string
+    title: string
   } >
   titleAsUrl: Function
 }
