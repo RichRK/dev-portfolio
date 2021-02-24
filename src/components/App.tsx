@@ -12,8 +12,15 @@ function App() {
   }
 
   const routes = Projects.map( ( project ) =>
-    <Route key={ project._key } path={ "/" + kebabCase( project.title ) }>
-      <Page title={ project.title } content={ project.content } />
+    <Route
+      key={ project._key }
+      path={ "/" + kebabCase( project.title ) }
+    >
+      <Page
+        content={ project.content }
+        kebabCaseTitle={ kebabCase( project.title ) }
+        title={ project.title }
+      />
     </Route>
   );
 

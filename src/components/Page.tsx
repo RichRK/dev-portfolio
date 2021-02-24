@@ -7,11 +7,13 @@ interface PageProps {
     challenges?: Array< string | Array<string> >
     future?: Array< string | Array<string> >
   }
+  kebabCaseTitle: string
   title: string
 }
 
 function Page(props: PageProps){
 
+  // Necessary as some pages have no content yet.
   const contentExists = Object.keys( props.content ).length;
 
   const content = Object.entries( props.content ).map( ([ heading, text ]) =>
@@ -39,6 +41,10 @@ function Page(props: PageProps){
   return (
     <div className="grid grid-cols-1 gap-8">
       <h1 className="font-bold text-5xl">{ props.title }</h1>
+      <img
+        alt=""
+        src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
+      />
       { contentExists ? content : <p>Nothing to show here yet. 👻</p> }
     </div>
   );
