@@ -13,13 +13,13 @@ interface HomeProps {
     language: string
     title: string
   } >
-  titleAsUrl: Function
+  kebabCase: Function
 }
 
 function Home( props: HomeProps ){
 
   const cards = props.projects.map( ( project ) =>
-    <Link key={ project._key } to={ "/" + props.titleAsUrl( project.title ) }>
+    <Link key={ project._key } to={ "/" + props.kebabCase( project.title ) }>
       <Card
         language={ project.language }
         title={ project.title }

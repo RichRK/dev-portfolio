@@ -7,12 +7,12 @@ import Projects from '../assets/projects.json';
 
 function App() {
 
-  const titleAsUrl = ( title: string ): string => {
-    return title.toLowerCase().replaceAll( ' ', '-' )
+  const kebabCase = ( text: string ): string => {
+    return text.toLowerCase().replaceAll( ' ', '-' )
   }
 
   const routes = Projects.map( ( project ) =>
-    <Route key={ project._key } path={ "/" + titleAsUrl( project.title ) }>
+    <Route key={ project._key } path={ "/" + kebabCase( project.title ) }>
       <Page title={ project.title } content={ project.content } />
     </Route>
   );
@@ -21,7 +21,7 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-lg text-gray-100 p-8 xl:px-20 xl:py-14">
       <Router>
         <Route path="/" exact>
-          <Home projects={ Projects } titleAsUrl={ titleAsUrl } />
+          <Home projects={ Projects } kebabCase={ kebabCase } />
         </Route>
         { routes }
       </Router>
