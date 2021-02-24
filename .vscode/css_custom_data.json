@@ -22,6 +22,16 @@
         ]
       },
       {
+        "name": "@layer",
+        "description": "Use the `@layer` directive to tell Tailwind which 'bucket' a set of custom styles belong to. Valid layers are a `base`, `components`, and `utilities`.",
+        "references": [
+          {
+            "name": "Tailwind Documentation",
+            "url": "https://tailwindcss.com/docs/functions-and-directives#layer"
+          }
+        ]
+      },
+      {
         "name": "@screen",
         "description": "The `@screen` directive allows you to create media queries that reference your breakpoints by **name** instead of duplicating their values in your own CSS:\n```css\n@screen sm {\n  /* ... */\n}\n```\n…gets transformed into this:\n```css\n@media (min-width: 640px) {\n  /* ... */\n}\n```\n",
         "references": [
