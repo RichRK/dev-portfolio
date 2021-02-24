@@ -18,7 +18,7 @@ function Page(props: PageProps){
 
   const content = Object.entries( props.content ).map( ([ heading, text ]) =>
     <React.Fragment key={ heading }>
-      <h2 className="font-bold text-2xl capitalize">
+      <h2 className="font-medium text-2xl capitalize">
         { heading }
       </h2>
       { text?.map( ( paragraph, i ) =>
@@ -40,7 +40,7 @@ function Page(props: PageProps){
 
   return (
     <div className="grid grid-cols-1 gap-8">
-      <h1 className="font-bold text-5xl">{ props.title }</h1>
+      <h1 className="font-medium text-5xl">{ props.title }</h1>
       <img
         alt=""
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 

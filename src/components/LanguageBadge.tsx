@@ -19,7 +19,7 @@ function LanguageBadge(props: LanguageBadgeProps){
   }
 
   return (
-    <p className={`absolute top-2 right-4 ${ bgColour( props.language ) } text-gray-100 rounded-md px-2 py-1 text-sm`}>
+    <p className={`absolute top-2 right-4 ${ bgColour( props.language ) } font-medium text-gray-100 rounded-md px-2 py-1 text-sm`}>
       { props.language }
     </p>
   );
