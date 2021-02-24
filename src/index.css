@@ -7,11 +7,15 @@
 @layer base {
 
   h1, h2, h3, h4, h5, h6 {
-    @apply cursor-default;
+    @apply cursor-default select-none;
   }
 
-  p {
+  p, li {
     @apply selection:bg-blue-500;
+  }
+
+  img {
+    @apply select-none;
   }
   
 }
