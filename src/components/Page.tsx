@@ -2,10 +2,10 @@ import React from 'react';
 
 interface PageProps {
   content: {
-    requirements?: Array< string | Array<string> > 
-    process?: Array< string | Array<string> >
-    challenges?: Array< string | Array<string> >
-    future?: Array< string | Array<string> >
+    requirements?: Array<string | string[]> 
+    process?: Array<string | string[]>
+    challenges?: Array<string | string[]>
+    future?: Array<string | string[]>
   }
   kebabCaseTitle: string
   title: string
