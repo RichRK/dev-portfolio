@@ -10,7 +10,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: [ 'selection' ]
+      backgroundColor: [ 'selection' ],
+      margin: [ 'last' ]
     }
   },
   plugins: [
