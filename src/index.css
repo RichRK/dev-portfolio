@@ -11,7 +11,7 @@
   }
 
   p, li {
-    @apply selection:bg-blue-500;
+    @apply selection:bg-bluegray-600;
   }
 
   img {
