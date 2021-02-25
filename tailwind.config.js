@@ -9,14 +9,15 @@ module.exports = {
     }
   },
   variants: {
-    backgroundColor: ['selection'],
-    extend: {}
+    extend: {
+      backgroundColor: [ 'selection' ]
+    }
   },
   plugins: [
-    plugin(function({ addVariant, e }) {
-      addVariant('selection', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`selection${separator}${className}`)}::selection`
+    plugin( function({ addVariant, e }) {
+      addVariant( 'selection', ({ modifySelectors, separator }) => {
+        modifySelectors( ({ className }) => {
+          return `.${e(`selection${ separator }${ className }`)}::selection`
         })
       })
     })
