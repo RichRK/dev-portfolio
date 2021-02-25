@@ -25,7 +25,7 @@ function App() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-900 font-sans font-light text-lg text-gray-100 p-8 xl:px-20 xl:py-14">
+    <div className="min-h-screen bg-gray-900 font-sans font-light text-lg text-gray-100 pt-12 pb-20 px-8 xl:pt-14">
       <Router>
         <Route path="/" exact>
           <Home projects={ Projects } kebabCase={ kebabCase } />

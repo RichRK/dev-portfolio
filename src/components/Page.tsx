@@ -23,14 +23,14 @@ function Page(props: PageProps){
       </h2>
       { text?.map( ( paragraph, i ) =>
         <React.Fragment key={ i }>
-          { Array.isArray( paragraph ) ? <ul>
+          { Array.isArray( paragraph ) ? <ul className="list-disc">
             { paragraph.map( ( bullet, i ) =>
                 <li key={ i }>
                   { bullet }
                 </li>
             ) }
           </ul> :
-          <p className="col-start-1 col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
+          <p className="col-start-1 col-span-full mb-4 xl:mb-6">
             { paragraph }
           </p> }
         </React.Fragment>
@@ -39,8 +39,8 @@ function Page(props: PageProps){
   );
 
   return (
-    <div className="grid grid-cols-1 gap-8">
-      <h1 className="font-medium text-5xl">{ props.title }</h1>
+    <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto inset-x-0">
+      <h1 className="font-bold text-5xl">{ props.title }</h1>
       <img
         alt=""
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
