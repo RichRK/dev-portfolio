@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Card from './Card';
 
 interface HomeProps {
+
   projects: Array< {
     _key: number
     content: {
@@ -14,6 +15,7 @@ interface HomeProps {
     title: string
   } >
   kebabCase: Function
+
 }
 
 function Home( props: HomeProps ){
@@ -25,9 +27,11 @@ function Home( props: HomeProps ){
         title={ project.title }
       />
     </Link>
+    
   );
 
   return (
+
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:px-20">
       <h1 className="col-span-full text-5xl font-bold">
         Development work
@@ -37,6 +41,7 @@ function Home( props: HomeProps ){
       </p>
       { cards }
     </div>
+
   );
 
 }

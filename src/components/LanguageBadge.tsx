@@ -1,10 +1,13 @@
 interface LanguageBadgeProps {
+
   language: string
+  
 }
 
 function LanguageBadge(props: LanguageBadgeProps){
 
   const bgColour = ( language: string ): string => {
+
     switch ( language ) {
       default:
       case "C#":
@@ -16,12 +19,15 @@ function LanguageBadge(props: LanguageBadgeProps){
       case "Vue":
         return "bg-purple-500";
     }
+
   }
 
   return (
+
     <p className={`absolute top-2 right-4 ${ bgColour( props.language ) } font-medium text-gray-100 rounded-md px-2 py-1 text-sm`}>
       { props.language }
     </p>
+
   );
 
 }

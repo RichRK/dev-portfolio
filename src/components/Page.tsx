@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface PageProps {
+
   content: {
     requirements?: Array<string | string[]> 
     process?: Array<string | string[]>
@@ -9,6 +10,7 @@ interface PageProps {
   }
   kebabCaseTitle: string
   title: string
+
 }
 
 function Page(props: PageProps){
@@ -17,6 +19,7 @@ function Page(props: PageProps){
   const contentExists = Object.keys( props.content ).length;
 
   const content = Object.entries( props.content ).map( ([ heading, text ]) =>
+
     <React.Fragment key={ heading }>
       <h2 className="font-medium text-2xl capitalize">
         { heading }
@@ -37,9 +40,11 @@ function Page(props: PageProps){
         </React.Fragment>
       ) }
     </React.Fragment>
+
   );
 
   return (
+
     <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto inset-x-0">
       <h1 className="font-bold text-5xl mb-2">{ props.title }</h1>
       <img
@@ -49,6 +54,7 @@ function Page(props: PageProps){
       />
       { contentExists ? content : <p>Nothing to show here yet. 👻</p> }
     </div>
+    
   );
 
 }
