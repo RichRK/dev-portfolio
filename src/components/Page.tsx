@@ -52,7 +52,7 @@ function Page(props: PageProps){
         className="mb-3 rounded-lg"
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
       />
-      { contentExists ? content : <p>Nothing to show here yet. 👻</p> }
+      { contentExists ? content : <p>I haven't got around to writing this project up just yet! Check back soon. 👀</p> }
     </div>
 
   );
