@@ -46,7 +46,7 @@ function Page(props: PageProps){
   return (
 
     <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto inset-x-0">
-      <h1 className="font-bold text-5xl mb-2">{ props.title }</h1>
+      <h1 className="font-bold text-5xl leading-tight mb-2">{ props.title }</h1>
       <img
         alt=""
         className="mb-3 rounded-lg"

@@ -30,7 +30,7 @@ function App() {
 
   return (
 
-    <div className="min-h-screen bg-gray-900 font-sans font-light text-lg text-gray-100 pt-12 pb-20 px-8 xl:pt-14">
+    <div className="min-h-screen bg-gray-900 font-sans font-light text-lg text-gray-100 pt-10 md:pt-12 lg:pt-14 pb-20 px-8">
       <Router>
         <Route path="/" exact>
           <Home projects={ Projects } kebabCase={ kebabCase } />

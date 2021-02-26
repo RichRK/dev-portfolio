@@ -33,14 +33,16 @@ function Home( props: HomeProps ){
 
   return (
 
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:px-20">
-      <h1 className="col-span-full text-5xl font-bold">
+    <div className="md:px-4 lg:px-10 xl:px-16">
+      <h1 className="text-5xl font-bold leading-tight mb-6 lg:mb-8">
         Development work
       </h1>
-      <p className="col-span-full mb-4 sm:w-2/3 lg:w-1/2 xl:mb-6">
+      <p className="mb-10 lg:mb-12 sm:w-2/3 lg:w-1/2">
         A selection of projects I've worked on — some big and some small, all full of their own challenges.
       </p>
-      { cards }
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-8 md:gap-10 lg:gap-14 xl:gap-16">
+        { cards }
+      </div>
     </div>
 
   );
