@@ -6,25 +6,9 @@ interface LanguageBadgeProps {
 
 function LanguageBadge(props: LanguageBadgeProps){
 
-  const bgColour = ( language: string ): string => {
-
-    switch ( language ) {
-      default:
-      case "C#":
-        return "bg-blue-500";
-      case "jQuery":
-        return "bg-pink-500";
-      case "Python":
-        return "bg-green-500";
-      case "Vue":
-        return "bg-purple-500";
-    }
-
-  }
-
   return (
 
-    <p className={`absolute top-2 right-4 ${ bgColour( props.language ) } font-medium text-gray-100 rounded-md px-2 py-1 text-sm`}>
+    <p className="absolute top-4 right-4 bg-black bg-opacity-25 font-medium text-gray-200 rounded-md px-2 pt-2 pb-1 text-sm">
       { props.language }
     </p>
 
