@@ -49,12 +49,12 @@ function Page(props: PageProps){
       <h1 className="font-bold text-5xl mb-2">{ props.title }</h1>
       <img
         alt=""
-        className="mb-3"
+        className="mb-3 rounded-lg"
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
       />
       { contentExists ? content : <p>Nothing to show here yet. 👻</p> }
     </div>
-    
+
   );
 
 }

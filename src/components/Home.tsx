@@ -23,16 +23,17 @@ function Home( props: HomeProps ){
   const cards = props.projects.map( ( project ) =>
     <Link key={ project._key } to={ "/" + props.kebabCase( project.title ) }>
       <Card
+        kebabCaseTitle={ props.kebabCase( project.title ) }
         language={ project.language }
         title={ project.title }
       />
     </Link>
-    
+
   );
 
   return (
 
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:px-20">
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:px-20">
       <h1 className="col-span-full text-5xl font-bold">
         Development work
       </h1>
