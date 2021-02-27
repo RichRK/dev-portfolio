@@ -5,19 +5,23 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false,
   theme: {
+    fontFamily: {
+      'sans': [ '"Josefin Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif' ]
+    },
     extend: {
       colors: {
         bluegray: colors.blueGray
+      },
+      scale: {
+        '102': '1.02'
       }
-    },
-    fontFamily: {
-      'sans': [ '"Josefin Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif' ]
     }
   },
   variants: {
     extend: {
       backgroundColor: [ 'selection' ],
-      margin: [ 'last' ]
+      margin: [ 'last' ],
+      transform: [ 'hover' ]
     }
   },
   plugins: [

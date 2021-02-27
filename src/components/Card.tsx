@@ -12,7 +12,7 @@ function Card(props: CardProps){
 
   return (
 
-    <div className="relative select-none bg-gray-200 rounded-xl text-gray-700">
+    <div className="relative select-none bg-gray-200 rounded-xl text-gray-700 transition transform-gpu hover:scale-102">
       <img
         alt="Project banner, decorative only"
         className="rounded-t-lg"
