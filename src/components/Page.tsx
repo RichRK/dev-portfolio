@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 import github from '../assets/github.png';
 
 interface PageProps {
@@ -54,20 +55,12 @@ function Page(props: PageProps){
       <img
         alt=""
         className="mb-3 rounded-lg"
-        src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
+        src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` }
       />
       { 
         contentExists ?
-        <a className="w-max mb-3" href={ props.repo } rel="noreferrer" target="_blank">
-          <button className="w-max rounded-md px-4 pt-2 pb-1 border-2 border-gray-700">
-            View repo
-            <img
-              alt="GitHub logo"
-              className="inline opacity-80 ml-3 mb-1"
-              src={ github }
-            />
-          </button>
-        </a> : null
+        <Button icon={ github } url={ props.repo }>View repo</Button> :
+        null
       }
       {
         contentExists ?
