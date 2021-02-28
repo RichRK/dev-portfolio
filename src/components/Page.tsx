@@ -1,4 +1,5 @@
 import React from 'react';
+import github from '../assets/github.png';
 
 interface PageProps {
 
@@ -9,6 +10,7 @@ interface PageProps {
     future?: Array<string | string[]>
   }
   kebabCaseTitle: string
+  repo: string
   title: string
 
 }
@@ -46,13 +48,32 @@ function Page(props: PageProps){
   return (
 
     <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto inset-x-0">
-      <h1 className="font-bold text-5xl leading-tight mb-2">{ props.title }</h1>
+      <h1 className="font-bold text-5xl leading-tight mb-2">
+        { props.title }
+      </h1>
       <img
         alt=""
         className="mb-3 rounded-lg"
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` } 
       />
-      { contentExists ? content : <p>I haven't got around to writing this project up just yet! Check back soon. 👀</p> }
+      { 
+        contentExists ?
+        <a className="w-max mb-3" href={ props.repo } rel="noreferrer" target="_blank">
+          <button className="w-max rounded-md px-4 pt-2 pb-1 border-2 border-gray-700">
+            View repo
+            <img
+              alt="GitHub logo"
+              className="inline opacity-80 ml-3 mb-1"
+              src={ github }
+            />
+          </button>
+        </a> : null
+      }
+      {
+        contentExists ?
+        content : 
+        <p>I haven't got around to writing this project up just yet! Check back soon. 👀</p>
+      }
     </div>
 
   );

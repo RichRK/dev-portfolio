@@ -22,6 +22,7 @@ function App() {
       <Page
         content={ project.content }
         kebabCaseTitle={ kebabCase( project.title ) }
+        repo={ project.repo }
         title={ project.title }
       />
     </Route>

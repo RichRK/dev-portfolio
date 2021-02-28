@@ -12,6 +12,7 @@ interface HomeProps {
         future?: Array<string | string[]>
     };
     language: string
+    repo: string
     title: string
   } >
   kebabCase: Function

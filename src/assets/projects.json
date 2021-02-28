@@ -24,6 +24,7 @@
             ]
         },
         "language": "Vue",
+        "repo": "https://github.com/RichWK/newlistingspa",
         "title": "Listing form"
     },
     {
@@ -55,30 +56,35 @@
             ]
         },
         "language": "C#",
+        "repo": "https://github.com/RichWK/GeneratePids",
         "title": "PID generator"
     },
     {
         "_key": 3,
         "content": {},
         "language": "Python",
+        "repo": "",
         "title": "Automated testing"
     },
     {
         "_key": 4,
         "content": {},
         "language": "C#",
+        "repo": "",
         "title": "Data from Microsoft Dynamics"
     },
     {
         "_key": 5,
         "content": {},
         "language": "jQuery",
+        "repo": "",
         "title": "Community Maps"
     },
     {
         "_key": 6,
         "content": {},
         "language": "jQuery",
+        "repo": "",
         "title": "Remember When"
     }
 ]
