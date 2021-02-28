@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Page from './Page';
+import ScrollToTop from './ScrollToTop';
+
 import Projects from '../assets/projects.json';
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
 
     <div className="min-h-screen bg-gray-900 font-sans font-light text-lg text-gray-100 pt-10 md:pt-12 lg:pt-14 pb-20 px-8">
       <Router>
+        <ScrollToTop />
         <Route path="/" exact>
           <Home projects={ Projects } kebabCase={ kebabCase } />
         </Route>
