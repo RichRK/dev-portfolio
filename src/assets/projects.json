@@ -10,7 +10,7 @@
             ],
             "process": [
                 "Ensuring the viability of my idea before getting in too deep was paramount, so I initially limited myself to only building a subset of the first page of the PDF. Only once I was satisfied with how it had come together did I proceed to assemble the rest.",
-                "Vue 3 was my framework of choice, mostly because I enjoy working with it. Nonetheless, this project could’ve been realised with React just as easily.",
+                "Vue 3 was my framework of choice, mostly because of my preference for the developer experience it provides. Nonetheless, this project could’ve been realised with React just as easily.",
                 "In an effort to reduce the time I’d spend designing each individual input component, I decided to experiment with the PrimeFaces UI library. In this way I was able to quickly grab their base components and make alterations as necessary. One approach I used a couple of times was to group particular inputs into single components where it made sense to do so. For example: radio buttons and checkboxes were a natural fit, due to the significant degree of overlap between their behaviours and layout requirements."
             ],
             "challenges": [
