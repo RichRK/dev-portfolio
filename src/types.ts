@@ -1,12 +1,15 @@
+interface ContentObject {
+
+  requirements?: Array<string | string[]>
+  process?: Array<string | string[]>
+  challenges?: Array<string | string[]>
+  future?: Array<string | string[]>
+}
+
 export interface HomeProps {
 
   projects: Array< {
-    content: {
-        requirements?: Array<string | string[]>
-        process?: Array<string | string[]>
-        challenges?: Array<string | string[]>
-        future?: Array<string | string[]>
-    };
+    content: ContentObject
     language: string
     repo: string
     title: string
@@ -16,12 +19,7 @@ export interface HomeProps {
 
 export interface PageProps {
 
-  content: {
-    requirements?: Array<string | string[]> 
-    process?: Array<string | string[]>
-    challenges?: Array<string | string[]>
-    future?: Array<string | string[]>
-  }
+  content: ContentObject
   kebabCaseTitle: string
   repo: string
   title: string
