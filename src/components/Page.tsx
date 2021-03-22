@@ -6,33 +6,29 @@ import Button from './Button';
 
 function Page(props: PageProps){
 
-  // Necessary as some pages have no content yet.
-  const contentExists = Object.keys( props.content ).length;
+  // Some pages have no content yet.
+  const writeupExists = props.writeup.length;
 
-  const content = Object.entries( props.content ).map( ([ heading, text ]) =>
+  const writeup = props.writeup.map(( item, i ) => {
 
-    <React.Fragment key={ heading }>
-      <h2 className="font-medium text-2xl capitalize">
-        { heading }
-      </h2>
-      { text?.map( ( paragraph, i ) =>
-        <React.Fragment key={ i }>
-          { Array.isArray( paragraph ) ?
-          <ul className="list-disc pl-5">
-            { paragraph.map( ( bullet, i ) =>
-              <li className="mb-8 last:mb-0 pl-1" key={ i }>
-                { bullet }
-              </li>
-            ) }
-          </ul> :
-          <p className="col-start-1 col-span-full">
-            { paragraph }
-          </p> }
-        </React.Fragment>
-      ) }
-    </React.Fragment>
+    if ( item.type === "heading" ) {
+      return <h2 key={ i } className="font-medium text-2xl">{ item.content }</h2>
+    }
 
-  );
+    if ( Array.isArray( item.content )) {
+      if ( item.type === "paragraphs" ) {
+        return item.content.map(( paragraph, i ) => {
+          return <p key={ i } className="col-start-1 col-span-full">{ paragraph }</p>
+        })
+      }
+      else {
+        return <ul key={ i } className="list-disc pl-5">{ item.content.map(( bullet, i ) => {
+          return <li key={ i } className="mb-8 last:mb-0 pl-1">{ bullet }</li>
+        }) }</ul>
+      }
+    }
+    else { return <></>}
+  });
 
   return (
 
@@ -47,8 +43,8 @@ function Page(props: PageProps){
       />
       <Button icon={ github } url={ props.repo }>Visit repo</Button>
       {
-        contentExists ?
-        content : 
+        writeupExists ?
+        writeup : 
         <p>I haven't got around to writing this project up just yet! Check back soon. 👀</p>
       }
     </div>

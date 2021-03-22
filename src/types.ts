@@ -1,30 +1,25 @@
-export interface HomeProps {
+// Object types
 
-  projects: Array< {
-    content: {
-      requirements?: Array<string | string[]>
-      process?: Array<string | string[]>
-      challenges?: Array<string | string[]>
-      future?: Array<string | string[]>
-    }
-    language: string
-    repo: string
-    title: string
-  } >
-  kebabCase: Function
+interface Writeup {
+
+  content: string | string[]
+  type: string
 }
 
-export interface PageProps {
+interface Project {
 
-  content: {
-    requirements?: Array<string | string[]>
-    process?: Array<string | string[]>
-    challenges?: Array<string | string[]>
-    future?: Array<string | string[]>
-  }
-  kebabCaseTitle: string
+  language: string
   repo: string
   title: string
+  writeup: Writeup[]
+}
+
+// Prop types
+
+export interface HomeProps {
+
+  kebabCase: Function
+  projects: Project[]
 }
 
 export interface CardProps {
@@ -37,6 +32,14 @@ export interface CardProps {
 export interface LanguageBadgeProps {
 
   language: string
+}
+
+export interface PageProps {
+
+  kebabCaseTitle: string
+  repo: string
+  title: string
+  writeup: Writeup[]
 }
 
 export interface ButtonProps {

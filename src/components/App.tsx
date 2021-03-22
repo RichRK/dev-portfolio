@@ -22,10 +22,10 @@ function App() {
       path={ "/" + kebabCase( project.title ) }
     >
       <Page
-        content={ project.content }
         kebabCaseTitle={ kebabCase( project.title ) }
         repo={ project.repo }
         title={ project.title }
+        writeup={ project.writeup }
       />
     </Route>
 
