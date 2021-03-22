@@ -60,25 +60,25 @@
     {
         "content": {},
         "language": "Python",
-        "repo": "",
+        "repo": "https://github.com/RichWK/migration-unit-testing",
         "title": "Automated testing"
     },
     {
         "content": {},
         "language": "C#",
-        "repo": "",
-        "title": "Data from Microsoft Dynamics"
+        "repo": "https://github.com/RichWK/fetch-data-from-dynamics",
+        "title": "Fetching data from Dynamics"
     },
     {
         "content": {},
         "language": "jQuery",
-        "repo": "",
+        "repo": "https://github.com/RichWK/community-maps",
         "title": "Community Maps"
     },
     {
         "content": {},
         "language": "jQuery",
-        "repo": "",
+        "repo": "https://github.com/RichRK/rememberwhen.studio",
         "title": "Remember When"
     }
 ]

@@ -57,11 +57,7 @@ function Page(props: PageProps){
         className="mb-3 rounded-lg"
         src={ `${ process.env.PUBLIC_URL }/${ props.kebabCaseTitle }.png` }
       />
-      { 
-        contentExists ?
-        <Button icon={ github } url={ props.repo }>Visit repo</Button> :
-        null
-      }
+      <Button icon={ github } url={ props.repo }>Visit repo</Button>
       {
         contentExists ?
         content : 
