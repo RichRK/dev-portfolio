@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HomeProps } from '../types'
 
-import Card from './Card';
+import Card from '../components/Card';
 
 function Home( props: HomeProps ){
 

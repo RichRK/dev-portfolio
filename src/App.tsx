@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './Home';
-import Page from './Page';
-import ScrollToTop from './ScrollToTop';
+import Home from './views/Home';
+import Page from './views/Page';
+import ScrollToTop from './components/ScrollToTop';
 
-import Projects from '../assets/projects.json';
+import Projects from './assets/projects.json';
 
 function App() {
 

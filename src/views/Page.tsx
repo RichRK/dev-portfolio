@@ -2,7 +2,7 @@ import React from 'react';
 import { PageProps } from '../types'
 import github from '../assets/github.png';
 
-import Button from './Button';
+import Button from '../components/Button';
 
 function Page(props: PageProps){
 
