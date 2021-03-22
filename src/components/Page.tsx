@@ -1,9 +1,20 @@
 import React from 'react';
-import { PageProps } from '../types'
+import Button from './Button';
 import github from '../assets/github.png';
 
-import Button from './Button';
+interface PageProps {
 
+  content: {
+    requirements?: Array<string | string[]> 
+    process?: Array<string | string[]>
+    challenges?: Array<string | string[]>
+    future?: Array<string | string[]>
+  }
+  kebabCaseTitle: string
+  repo: string
+  title: string
+
+}
 
 function Page(props: PageProps){
 

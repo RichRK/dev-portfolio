@@ -17,13 +17,13 @@ export interface HomeProps {
   kebabCase: Function
 }
 
-export interface PageProps {
+// export interface PageProps {
 
-  content: ContentObject
-  kebabCaseTitle: string
-  repo: string
-  title: string
-}
+//   content: ContentObject
+//   kebabCaseTitle: string
+//   repo: string
+//   title: string
+// }
 
 export interface CardProps {
 
