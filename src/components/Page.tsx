@@ -59,7 +59,7 @@ function Page(props: PageProps){
       />
       { 
         contentExists ?
-        <Button icon={ github } url={ props.repo }>View repo</Button> :
+        <Button icon={ github } url={ props.repo }>Visit repo</Button> :
         null
       }
       {
