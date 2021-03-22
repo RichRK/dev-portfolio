@@ -1,22 +1,7 @@
 import { Link } from 'react-router-dom';
+import { HomeProps } from '../types'
+
 import Card from './Card';
-
-interface HomeProps {
-
-  projects: Array< {
-    content: {
-        requirements?: Array<string | string[]>
-        process?: Array<string | string[]>
-        challenges?: Array<string | string[]>
-        future?: Array<string | string[]>
-    };
-    language: string
-    repo: string
-    title: string
-  } >
-  kebabCase: Function
-
-}
 
 function Home( props: HomeProps ){
 

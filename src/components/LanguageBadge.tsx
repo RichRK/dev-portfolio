@@ -1,8 +1,4 @@
-interface LanguageBadgeProps {
-
-  language: string
-  
-}
+import { LanguageBadgeProps } from '../types'
 
 function LanguageBadge(props: LanguageBadgeProps){
 

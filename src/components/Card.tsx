@@ -1,12 +1,5 @@
+import { CardProps } from '../types'
 import LanguageBadge from './LanguageBadge';
-
-interface CardProps {
-
-  kebabCaseTitle: string
-  language: string
-  title: string
-
-}
 
 function Card(props: CardProps){
 

@@ -1,10 +1,4 @@
-interface ButtonProps {
-
-  children: string
-  icon?: string
-  url: string
-  
-}
+import { ButtonProps } from '../types'
 
 function Button(props: ButtonProps){
 
