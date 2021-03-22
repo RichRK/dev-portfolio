@@ -4,7 +4,6 @@ import Card from './Card';
 interface HomeProps {
 
   projects: Array< {
-    _key: number
     content: {
         requirements?: Array<string | string[]>
         process?: Array<string | string[]>
@@ -21,8 +20,8 @@ interface HomeProps {
 
 function Home( props: HomeProps ){
 
-  const cards = props.projects.map( ( project ) =>
-    <Link key={ project._key } to={ "/" + props.kebabCase( project.title ) }>
+  const cards = props.projects.map( ( project, i ) =>
+    <Link key={ i } to={ "/" + props.kebabCase( project.title ) }>
       <Card
         kebabCaseTitle={ props.kebabCase( project.title ) }
         language={ project.language }
