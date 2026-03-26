@@ -32,7 +32,7 @@ const imagePath = `/${kebabTitle}.png`;
       <img alt="" class="mb-3 rounded-lg w-full" src={imagePath} />
       <Button icon="/github.png" url={repo}>Visit repo</Button>
       {
-        writeupExists && (
+        writeupExists ? (
           <div class="max-w-none">
             {writeup.map(item => {
               if (item.type === "heading") {
@@ -56,10 +56,7 @@ const imagePath = `/${kebabTitle}.png`;
               return null;
             })}
           </div>
-        )
-      }
-      {
-        !writeupExists && (
+        ) : (
           <p>I haven't got around to writing this project up just yet! Check back soon. 👀</p>
         )
       }
