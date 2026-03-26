@@ -3,30 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button';
 import projectsData from '../data/projects.json';
 import { kebabCase } from '../utils/kebabCase';
-
-type HeadingItem = {
-  type: "heading";
-  content: string;
-};
-
-type ParagraphsItem = {
-  type: "paragraphs";
-  content: string[];
-};
-
-type BulletsItem = {
-  type: "bullets";
-  content: string[];
-};
-
-type WriteupItem = HeadingItem | ParagraphsItem | BulletsItem;
-
-type Project = {
-  title: string;
-  language: string;
-  repo: string;
-  writeup: WriteupItem[];
-};
+import type { Project } from '../types/Project';
 
 export function getStaticPaths() {
   const projects = projectsData as Project[];
