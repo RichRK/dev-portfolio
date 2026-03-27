@@ -2,6 +2,7 @@
   "name": "dev-portfolio",
   "type": "module",
   "version": "0.2.0",
+  "packageManager": "yarn@4.13.0",
   "engines": {
     "node": ">=22.12.0"
   },
