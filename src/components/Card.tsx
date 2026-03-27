@@ -1,4 +1,5 @@
 import LanguageBadge from "./LanguageBadge";
+import { css } from "../../styled-system/css";
 
 interface CardProps {
   kebabCaseTitle: string;
@@ -6,16 +7,43 @@ interface CardProps {
   title: string;
 }
 
+const linkStyles = css({
+  d: "block",
+});
+
+const cardStyles = css({
+  pos: "relative",
+  userSelect: "none",
+  bg: "gray.200",
+  rounded: "xl",
+  color: "gray.700",
+  transition: "transform 0.2s ease-in-out",
+  transform: "translateZ(0)",
+  _hover: {
+    transform: "scale(1.02)",
+  },
+});
+
+const imageStyles = css({
+  roundedTop: "lg",
+  w: "100%",
+});
+
+const titleStyles = css({
+  p: "5",
+  fontWeight: "bold",
+});
+
 function Card(props: CardProps) {
   return (
-    <a href={`/${props.kebabCaseTitle}`} className="block">
-      <div className="relative select-none bg-gray-200 rounded-xl text-gray-700 transition transform-gpu hover:scale-102">
+    <a className={linkStyles} href={`/${props.kebabCaseTitle}`}>
+      <div className={cardStyles}>
         <img
+          className={imageStyles}
           alt="Project banner, decorative only"
-          className="rounded-t-lg w-full"
           src={`/${props.kebabCaseTitle}.png`}
         />
-        <p className="p-5 font-bold">{props.title}</p>
+        <p className={titleStyles}>{props.title}</p>
         <LanguageBadge language={props.language} />
       </div>
     </a>
