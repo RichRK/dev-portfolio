@@ -1,10 +1,13 @@
+--- 
 import { css } from "../../styled-system/css";
+import { Image } from "astro:assets";
 
-export interface ButtonProps {
-  children: string;
+interface Props {
   icon?: string;
   url: string;
 }
+
+const { icon, url } = Astro.props;
 
 const linkStyles = css({
   width: "max-content",
@@ -29,21 +32,24 @@ const buttonStyles = css({
 const iconStyles = css({
   display: "inline",
   opacity: 0.8,
-  ml: "3",
+  ml: "2",
   mb: "1",
 });
+---
 
-function Button(props: ButtonProps) {
-  return (
-    <a className={linkStyles} href={props.url} rel="noreferrer" target="_blank">
-      <button className={buttonStyles}>
-        {props.children}
-        {props.icon ? (
-          <img className={iconStyles} alt="GitHub logo" src={props.icon} />
-        ) : null}
-      </button>
-    </a>
-  );
-}
-
-export default Button;
+<a class={linkStyles} href={url} rel="noreferrer" target="_blank">
+  <button class={buttonStyles}>
+    <slot />
+    {
+      icon ? (
+        <Image
+          class={iconStyles}
+          alt="GitHub logo"
+          src={icon}
+          width={25}
+          height={25}
+        />
+      ) : null
+    }
+  </button>
+</a>

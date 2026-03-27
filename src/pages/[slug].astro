@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button";
+import Button from "../components/Button.astro";
 import projectsData from "../data/projects.json";
 import { kebabCase } from "../utils/kebabCase";
 import type { Project } from "../types/Project";
 import { css } from "../../styled-system/css";
+import { Image } from "astro:assets";
 
 export function getStaticPaths() {
   const projects = projectsData as Project[];
@@ -86,7 +87,13 @@ const listItemStyles = css({
       <h1 class={headingStyles}>
         {title}
       </h1>
-      <img alt="" class={imageStyles} src={imagePath} />
+      <Image
+        alt="Illustrative icon"
+        class={imageStyles}
+        src={imagePath}
+        width={800}
+        height={600}
+      />
       <Button icon="/github.png" url={repo}>Visit repo</Button>
       {
         writeupExists ? (

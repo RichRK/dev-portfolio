@@ -1,8 +1,11 @@
+---
 import { css } from "../../styled-system/css";
 
-export interface LanguageBadgeProps {
+interface Props {
   language: string;
 }
+
+const { language } = Astro.props;
 
 const styles = css({
   position: "absolute",
@@ -16,11 +19,8 @@ const styles = css({
   pt: "2",
   pb: "2",
   fontSize: "sm",
-  lineHeight: "none"
+  lineHeight: "none",
 });
+---
 
-function LanguageBadge(props: LanguageBadgeProps) {
-  return <div className={styles}>{props.language}</div>;
-}
-
-export default LanguageBadge;
+<div class={styles}>{language}</div>
